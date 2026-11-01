@@ -91,10 +91,9 @@ Then one by one delete the root node of the Max-heap and replace it with the las
 
 <img width="696" height="478" alt="image" src="https://github.com/user-attachments/assets/6f9eb3a3-1704-4a7d-a859-6ecc345e7b63" />
 
-# Time Complexity: 
-O(n log n)
-# Auxiliary Space: 
-O(log n), due to the recursive call stack. However, auxiliary space can be O(1) for iterative implementation.
+# Complexity Analysis
+Time Complexity: O(n log n)
+Auxiliary Space: O(log n), due to the recursive call stack. However, auxiliary space can be O(1) for iterative implementation.
 
 # Advantages:
 Efficient Time Complexity: Heap Sort has a guaranteed time complexity of O(n log n) in all cases, making it suitable for large datasets. The log n factor comes from the height of the binary heap, ensuring consistent performance.
@@ -119,14 +118,13 @@ Divide: Divide the list or array recursively into two halves until it can no mor
 Conquer: Each subarray is sorted individually using the merge sort algorithm.
 Merge: The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged.
 
-Complexity Analysis of Merge Sort
-# Time Complexity:
-
+# Complexity Analysis of Merge Sort
+Time Complexity: 
 Best Case: O(n log n), When the array is already sorted or nearly sorted.
 Average Case: O(n log n), When the array is randomly ordered.
 Worst Case: O(n log n), When the array is sorted in reverse order.
 
-# Auxiliary Space: 
+Auxiliary Space: 
 O(n), Additional space is required for the temporary array used during merging.
 
 # Applications of Merge Sort:
@@ -139,14 +137,14 @@ O(n), Additional space is required for the temporary array used during merging.
 -The merge function of merge sort to efficiently solve the problems like union and intersection of two sorted arrays.
 
 # Advantages and Disadvantages of Merge Sort
-# Advantages
+Advantages:
 
 Stability : Merge sort is a stable sorting algorithm, which means it maintains the relative order of equal elements in the input array.
 Guaranteed worst-case performance: Merge sort has a worst-case time complexity of O(N logN) , which means it performs well even on large datasets.
 Simple to implement: The divide-and-conquer approach is straightforward.
 Naturally Parallel : We independently merge subarrays that makes it suitable for parallel processing.
 
-# Disadvantages
+Disadvantages:
 
 Not an in-place, which means it requires additional memory to store the sorted data. This can be a disadvantage in applications where memory usage is a concern.
 Slower than QuickSort in general as QuickSort is more cache friendly because it works in-place.
@@ -165,13 +163,14 @@ Base Case: The recursion stops when there is only one element left in the sub-ar
 
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/ccbb98f7-e8f1-45e1-b701-ff49c9930e30" />
 
-# Time Complexity:
+# Complexity Analysis
+Time Complexity:
 
 Best Case: (Ω(n log n)), Occurs when the pivot element divides the array into two equal halves.
 Average Case (θ(n log n)), On average, the pivot divides the array into two parts, but not necessarily equal.
 Worst Case: (O(n²)), Occurs when the smallest or largest element is always chosen as the pivot (e.g., sorted arrays).
 
-# Auxiliary Space:
+Auxiliary Space:
 
 Worst-case scenario: O(n) due to unbalanced partitioning leading to a skewed recursion tree requiring a call stack of size O(n).
 Best-case scenario: O(log n) as a result of balanced partitioning leading to a balanced recursion tree with a call stack of size O(log n).
